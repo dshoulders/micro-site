@@ -1,0 +1,26 @@
+body.light {
+    --background-color: #fff;
+    --text-color: #333;
+    background-color: #fff;
+    color: #333;
+    --test-color: red;
+}
+
+body.dark {
+    --background-color: #333;
+    --text-color: #fff;
+    background-color: #333;
+    color: #fff;
+    --test-color: yellow;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* color: var(--text-color);
+    background-color: var(--background-color); */
+}
+
+h1 {
+    color: red;
+}

@@ -1,6 +1,12 @@
 import Main from './Main.js';
 import { React, ReactDOM } from 'https://unpkg.com/es-react';
-import Test from './components/Test.js';
+import ViewController from './components/ViewController.js';
+
+// TODO: 
+// listen for route and popstate
+// on route pushstate
+// then dispatch location
+
 
 customElements.define('micro-main', Main);
 
@@ -20,7 +26,7 @@ const init = () => {
         shadowRoot.append(styleElement, appRoot);
 
         ReactDOM.render(
-            React.createElement(Test, {}, null),
+            React.createElement(ViewController, {}, null),
             appRoot
         );
     }

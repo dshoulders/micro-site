@@ -1,4 +1,4 @@
-export default class Main extends HTMLElement {
+export default class Header extends HTMLElement {
 
     constructor() {
 

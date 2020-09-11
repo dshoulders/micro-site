@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micro Site</title>
+    <title>MicroSite</title>
 
-    <script src="/header/index.js"></script>
+    <link rel="stylesheet" href="/global/style.css" />
+    <script src="/global/index.js"></script>
+
+    <script src="/header/index.js" type="module"></script>
     <script src="/main/index.js" type="module"></script>
 </head>
-<body>
+<body class="light">
     <micro-header></micro-header>
     <micro-main></micro-main>
+
+    <script>
+        window.addEventListener('popstate', function () {
+            document.dispatchEvent(new CustomEvent('location', { detail: { path: document.location.pathname }}));
+        });
+    </script>
 </body>
 </html>
