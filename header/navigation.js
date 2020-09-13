@@ -5,6 +5,6 @@ export default [
     },
     {
         label: 'Shop',
-        url: '/shop'
+        url: 'shop'
     }
 ];
