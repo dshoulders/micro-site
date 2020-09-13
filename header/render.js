@@ -48,7 +48,7 @@ export default () => {
 
             document.dispatchEvent(new CustomEvent('route', { 
                 detail: {
-                    url: `search?query=${encodeURIComponent(value)}`,
+                    url: `/search?query=${encodeURIComponent(value)}`,
                 },
             }));
         }

@@ -11,7 +11,7 @@ const init = () => {
 
         const styleElement = document.createElement('link');
         styleElement.setAttribute('rel', 'StyleSheet');
-        styleElement.setAttribute('href', 'header/style.css');
+        styleElement.setAttribute('href', '/header/style.css');
         
         const header = render();
 
