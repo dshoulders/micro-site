@@ -35,7 +35,7 @@ export default () => {
     const themeSwitcher = appRoot.querySelector('#theme-switcher');
 
     themeSwitcher.addEventListener('click', ({ target: { checked } }) => {
-        const theme = checked ? 'dark' : 'light';
+        const theme = checked ? 'theme-dark' : 'theme-light';
         document.dispatchEvent(new CustomEvent('theme-switch', { detail: { theme }}));
     });
 

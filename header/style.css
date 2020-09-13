@@ -1,3 +1,11 @@
+:host {
+    --test-color: green;
+}
+
+:host:host-context(.theme-dark) {
+    --test-color: purple;
+}
+
 #header {
     background: #ccc;
 }
