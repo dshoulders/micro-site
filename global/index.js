@@ -1,3 +1,8 @@
+const baseUrl = document.location.href;
+const base = document.createElement('base');
+base.setAttribute('href', baseUrl);
+document.head.prepend(base);
+
 document.addEventListener('theme-switch', function ({ detail: { theme } }) {
     const body = document.querySelector('body');
     body.classList.remove('theme-light', 'theme-dark');
