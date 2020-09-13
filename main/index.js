@@ -15,7 +15,7 @@ const init = () => {
 
         const styleElement = document.createElement('link');
         styleElement.setAttribute('rel', 'StyleSheet');
-        styleElement.setAttribute('href', '/main/style.css');
+        styleElement.setAttribute('href', 'main/style.css');
 
         shadowRoot.append(styleElement, appRoot);
 
