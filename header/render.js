@@ -24,12 +24,10 @@ export default () => {
         mainNav.appendChild(element);
     });
 
-    // Add 'location' custom event dispatcher
+    // Add 'route' custom event dispatcher
     mainNav.addEventListener('click', (event) => {
         const href = event.target.getAttribute('href');
-        history.pushState(null, '', href);
-        // TODO: dispatch route
-        document.dispatchEvent(new CustomEvent('location', { detail: { path: href }}));
+        document.dispatchEvent(new CustomEvent('route', { detail: { url: href }}));
         event.preventDefault();
     });
 
@@ -48,17 +46,9 @@ export default () => {
         if (keyCode === 13) {
             // Enter key pressed
 
-            // Update Url
-            history.pushState(null, '', 'search?query=' + encodeURIComponent(value));
-
-            // TODO: dispatch route
-            // dispatch 'location' event
-            document.dispatchEvent(new CustomEvent('location', { 
-                detail: { 
-                    path: '/search', 
-                    params: [
-                        [ 'query', encodeURIComponent(value) ]
-                    ],
+            document.dispatchEvent(new CustomEvent('route', { 
+                detail: {
+                    url: `/search?query=${encodeURIComponent(value)}`,
                 },
             }));
         }

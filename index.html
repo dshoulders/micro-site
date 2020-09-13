@@ -14,11 +14,5 @@
 <body class="light">
     <micro-header></micro-header>
     <micro-main></micro-main>
-
-    <script>
-        window.addEventListener('popstate', function () {
-            document.dispatchEvent(new CustomEvent('location', { detail: { path: document.location.pathname }}));
-        });
-    </script>
 </body>
 </html>
